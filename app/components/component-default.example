@@ -1,0 +1,20 @@
+<!--  Základná šablóna komponentu  -->
+
+<template>
+    <div class="component-wrapper">
+        Kód komponentu
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "Nazov",
+        props: {
+
+        },
+        data: function() {
+            return {
+            }
+        }
+    };
+</script>

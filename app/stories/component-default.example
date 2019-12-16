@@ -1,0 +1,44 @@
+// Zakladna struktura stories
+
+//import vsetkych potrebnych objektov pre korektnu pracu so stories
+import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions/dist/index'; // pokial pri komponente chceme plugin actions
+import { withKnobs, text, boolean, select, number } from '@storybook/addon-knobs'; // pokial chceme pri komponentne plugin Knobs, definuju sa tu taktiez ake vsetky typy chceme (text, boolean, select, number atd.)
+
+import buttonBasic from '../components/Button'; // import samotneho vue komponentu
+
+//import doc notes
+import markdownNotesDefault from '../notes/component-default.md'; // import dokumentacii, ktore sa budu pouzivat, moze ich byt aj viac
+
+const stories = storiesOf('Cesta/ku/komponentu', module); // definujeme kde v strukture storybooku sa bude komponent nachadzat
+stories.addDecorator(withKnobs);
+
+//piseme ich standartne tu, lebo sa vo vacsine pripadov zdielaju medzi vsetkymi modifikaciami, nemame tak duplicitny redundantny kod
+export const methods = {
+	//tu pojdu metody, resp. actions, ktore sa maju hitnut v storybooku
+};
+
+//samotna definicia "modifikacii"
+stories.add('default', () => ({ // nazov
+    components: { buttonBasic }, // aky component sa pouziva
+    template: `<component :atribut="atribut"/>`, //komponent samotny aj s props, ktore sa maju passnut
+    props: {
+    	// priklady roznych typov
+        atribut: {
+            default: select('Type', ['','btn-primary', 'btn-secondary']) //ak ma byt knob select
+        },
+        atribut: {
+            default: text('Title', 'Button') //ak ma byt knob obycajny text
+        },
+        atribut: {
+			default: number('Cislo', '0') //ak ma byt knob obycajny text
+		},
+        atribut: {
+            default: boolean("Disabled", false) //ak ma byt knob true/false
+        },
+    },
+    methods, // objekt metod, ktory sme definovali hore, ale mozu tu ist aj priamo
+}),
+	//notes
+	{ notes:  {markdown: markdownNotesDefault} }
+);

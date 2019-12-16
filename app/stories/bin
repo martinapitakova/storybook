@@ -1,0 +1,185 @@
+// const stories = storiesOf('Basic|Buttons/Button', module);
+// stories.addDecorator(withKnobs);
+// stories.addDecorator(decoratorVueTemplate);
+//
+//
+//
+// stories.add('default', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :type="type" @clicked="onClick" :title="title" :size="size" :disabled="disabled" :outline="outline"/>`,
+//     props: {
+//         type: {
+//             default: select('Type', ['','btn-primary', 'btn-secondary'])
+//         },
+//         title: {
+//             default: text('Title', 'Button')
+//         },
+//         size: {
+//             default: select('Size', ['','btn-medium', 'btn-small', 'btn-large'])
+//         },
+//         disabled: {
+//             default: boolean("Disabled", false)
+//         },
+//         outline: {
+//             default: boolean("Outline", false)
+//         }
+//     },
+//     //methods,
+// }),
+// 	//notes
+// 	{ notes:  {markdown: markdownNotesDefault} }
+// )
+// 	.add('large', () => ({
+// 		components: { buttonBasic },
+// 		template: `<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :large="true" :title="title"/>`,
+// 		props: {
+// 			background: {
+// 				default: text('Background', '')
+// 			},
+// 			color: {
+// 				default: text('Color', '')
+// 			},
+// 			type: {
+// 				default: select('Class', ['','btn-primary', 'btn-secondary'])
+// 			},
+// 			title: {
+// 				default: text('Title', 'Button')
+// 			}
+// 		},
+// 		methods
+// 	}),
+// 		//notes
+// 		{ notes:  {markdown: markdownNotesAnother} }
+// 		);
+
+
+// .add('large', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :large="true" :title="title"/>`,
+//     props: {
+//         background: {
+//             default: text('Background', '')
+//         },
+//         color: {
+//             default: text('Color', '')
+//         },
+//         type: {
+//             default: select('Class', ['','btn-primary', 'btn-secondary'])
+//         },
+//         title: {
+//             default: text('Title', 'Button')
+//         }
+//     },
+//     methods
+// }))
+// .add('disabled', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :disabled="true" @clicked="clicked"/>`,
+//     props: {
+//         title: {
+//             default: text('Title', 'Button')
+//         }
+//     },
+//     methods
+// }))
+// .add('uppercase', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :uppercase="true" :title="title"/>`,
+//     props: {
+//         background: {
+//             default: text('Background', '#333')
+//         },
+//         color: {
+//             default: text('Color', '#fff')
+//         },
+//         type: {
+//             default: select('Class', ['','btn-primary', 'btn-secondary'])
+//         },
+//         title: {
+//             default: text('Title', 'Button')
+//         }
+//     },
+//     methods
+// }));
+
+
+// import { storiesOf } from '@storybook/vue';
+// import { action } from '@storybook/addon-actions';
+// import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+//
+// import buttonBasic from './Button';
+//
+// const stories = storiesOf('Buttons', module);
+// stories.addDecorator(withKnobs);
+//
+// export const methods = {
+//     clicked: action('clicked'),
+// };
+//
+// stories.add('default', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :title="title"/>`,
+//     props: {
+//         background: {
+//             default: text('Background', '')
+//         },
+//         color: {
+//             default: text('Color', '')
+//         },
+//         type: {
+//             default: select('Class', ['','btn-primary', 'btn-secondary'])
+//         },
+//         title: {
+//             default: text('Title', 'Button')
+//         }
+//     },
+//     methods
+// }))
+// .add('large', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :large="true" :title="title"/>`,
+//     props: {
+//         background: {
+//             default: text('Background', '')
+//         },
+//         color: {
+//             default: text('Color', '')
+//         },
+//         type: {
+//             default: select('Class', ['','btn-primary', 'btn-secondary'])
+//         },
+//         title: {
+//             default: text('Title', 'Button')
+//         }
+//     },
+//     methods
+// }))
+// .add('disabled', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :disabled="true" @clicked="clicked"/>`,
+//     props: {
+//         title: {
+//             default: text('Title', 'Button')
+//         }
+//     },
+//     methods
+// }))
+// .add('uppercase', () => ({
+//     components: { buttonBasic },
+//     template: `<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :uppercase="true" :title="title"/>`,
+//     props: {
+//         background: {
+//             default: text('Background', '#333')
+//         },
+//         color: {
+//             default: text('Color', '#fff')
+//         },
+//         type: {
+//             default: select('Class', ['','btn-primary', 'btn-secondary'])
+//         },
+//         title: {
+//             default: text('Title', 'Button')
+//         }
+//     },
+//     methods
+// }));
