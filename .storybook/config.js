@@ -1,18 +1,9 @@
 import { configure } from '@storybook/vue';
-import { addParameters } from '@storybook/vue';
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
-
-addParameters({
-	docs: {
-		container: DocsContainer,
-		page: DocsPage,
-	},
-});
 //import { mapState } from "vuex/types";
 
 //styles
 import '../css/tailwind.css';
-import '../dist/build.min.css'; //minified sass
+import '../dist/build.min.css'; //minified css
 
 const path = require('path');
 

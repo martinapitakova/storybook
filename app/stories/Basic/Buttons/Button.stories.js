@@ -11,8 +11,6 @@ import buttonBasic from '../../../components/Button';
 //import markdownNotesDefault from '../../../notes/Basic/Buttons/Button/Button.md';
 //import markdownNotesAnother from '../../../notes/Basic/Buttons/Button/Button_large.md';
 
-import mdx from '../../../notes/Basic/Buttons/Button/Button.mdx';
-
 // ******
 // DEFINE NAME VARIABLE
 
@@ -30,11 +28,6 @@ var decoratorVueTemplate = () => {
 
 export default {
 	title: 'Basic|Buttons/Button',
-	parameters: {
-		docs: {
-			page: mdx,
-		},
-	},
 	component: buttonBasic,
 	decorators: [withKnobs]
 };
@@ -70,7 +63,7 @@ export const loading = () => (
 				default: boolean("Outline", false)
 			}
 		},
-		methods: defaultMethods
+		methods: defaultMethods,
 	}
 );
 
@@ -79,35 +72,35 @@ loading.story = {
 	decorators: [decoratorVueTemplate]
 };
 
-export const large = () => (
-	{
-		components: {buttonBasic},
-		template: '<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :large="true" :title="title"/>',
-		props: {
-			type: {
-				default: select('Type', ['', 'btn-primary', 'btn-secondary'])
-			},
-			title: {
-				default: text('Title', 'Button')
-			},
-			size: {
-				default: select('Size', ['', 'btn-medium', 'btn-small', 'btn-large'])
-			},
-			disabled: {
-				default: boolean("Disabled", false)
-			},
-			outline: {
-				default: boolean("Outline", false)
-			}
-		},
-		methods: defaultMethods
-	}
-);
+// export const large = () => (
+// 	{
+// 		components: {buttonBasic},
+// 		template: '<buttonBasic :background="background" :color="color" :type="type" :disabled="disabled" @clicked="clicked" :large="true" :title="title"/>',
+// 		props: {
+// 			type: {
+// 				default: select('Type', ['', 'btn-primary', 'btn-secondary'])
+// 			},
+// 			title: {
+// 				default: text('Title', 'Button')
+// 			},
+// 			size: {
+// 				default: select('Size', ['', 'btn-medium', 'btn-small', 'btn-large'])
+// 			},
+// 			disabled: {
+// 				default: boolean("Disabled", false)
+// 			},
+// 			outline: {
+// 				default: boolean("Outline", false)
+// 			}
+// 		},
+// 		methods: defaultMethods
+// 	}
+// );
 
 // ******
 // ADD OTHER ADDONS TO MODIFICATIONS
 
-large.story = {
-	//parameters: {notes: markdownNotesAnother},
-	decorators: [decoratorVueTemplate]
-};
+// large.story = {
+// 	//parameters: {notes: markdownNotesAnother},
+// 	decorators: [decoratorVueTemplate]
+// };

@@ -27,7 +27,7 @@ module.exports = async ({ config, mode }) => {
 	});
 
 	config.module.rules.push({
-		test: /\.mdx$/,
+		test: /\.(stories|story)\.mdx$/,
 		use: [
 			{
 				loader: 'babel-loader',
