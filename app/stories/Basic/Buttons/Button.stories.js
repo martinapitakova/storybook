@@ -11,7 +11,7 @@ import buttonBasic from '../../../components/Button';
 //import markdownNotesDefault from '../../../notes/Basic/Buttons/Button/Button.md';
 //import markdownNotesAnother from '../../../notes/Basic/Buttons/Button/Button_large.md';
 
-import mdx from '../../../notes/Basic/Buttons/Button/Button.stories.mdx';
+import mdx from '../../../notes/Basic/Buttons/Button/Button.mdx';
 
 // ******
 // DEFINE NAME VARIABLE
